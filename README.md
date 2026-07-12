@@ -1,2 +1,3 @@
 # OOP Study
-# BAI THUC HANH 1 DA XONG!!
+# Bai tap buoi 1 da xong!
+# Bai thuc hanh 1 da xong!
