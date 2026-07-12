@@ -1,36 +1,29 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
-#define PI 3.14159
 
 class HINHTRON {
 private:
-    float bankinh;
+    float r;
 public:
     void NHAP();
-    float CHUVI();
-    float DIENTICH();
+    void XUAT();
 };
 
 void HINHTRON::NHAP()
 {
-    cout << "- Ban kinh: "; cin >> bankinh;
+    cout << "- Ban kinh: "; cin >> r;
 }
-
-float HINHTRON::CHUVI()
+void HINHTRON::XUAT()
 {
-    return 2 * PI * bankinh;
-}
-
-float HINHTRON::DIENTICH()
-{
-    return PI * bankinh * bankinh;
+    cout << " Chu vi hinh tron la: " << 2* M_PI * r;
+    cout << "\n Dien tich hinh tron la: " << r * r * M_PI;
 }
 
 int main()
 {
     HINHTRON ht;
     ht.NHAP();
-    cout << "Chu vi: " << ht.CHUVI() << endl;
-    cout << "Dien tich: " << ht.DIENTICH() << endl;
+    ht.XUAT();
     return 0;
 }

@@ -6,7 +6,7 @@ private:
     float dayLon, dayNho, chieuCao;
 public:
     void NHAP();
-    float DIENTICH();
+    void XUAT();
 };
 
 void HINHTHANG::NHAP()
@@ -16,15 +16,15 @@ void HINHTHANG::NHAP()
     cout << "- Chieu cao: "; cin >> chieuCao;
 }
 
-float HINHTHANG::DIENTICH()
+void HINHTHANG::XUAT()
 {
-    return (dayLon + dayNho) * chieuCao / 2;
+   cout << "Dien tich hinh thang: " << (dayLon + dayNho) * chieuCao / 2;
 }
 
 int main()
 {
     HINHTHANG ht;
     ht.NHAP();
-    cout << "Dien tich hinh thang: " << ht.DIENTICH() << endl;
+    ht.XUAT();
     return 0;
 }

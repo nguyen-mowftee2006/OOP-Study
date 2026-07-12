@@ -7,7 +7,7 @@ private:
     float a, b, c;
 public:
     void NHAP();
-    void GIAI();
+    void XUAT();
 };
 
 void PTBAC2::NHAP()
@@ -16,7 +16,7 @@ void PTBAC2::NHAP()
     
 }
 
-void PTBAC2::GIAI()
+void PTBAC2::XUAT()
 {
     if (a == 0) {
         if (b == 0)
@@ -42,6 +42,6 @@ int main()
 {
     PTBAC2 pt;
     pt.NHAP();
-    pt.GIAI();
+    pt.XUAT();
     return 0;
 }

@@ -7,45 +7,33 @@ private:
     float a, b, c;
 public:
     void NHAP();
-    bool HOPLE();
-    float CHUVI();
-    float DIENTICH();
+    bool CHECK();
+    void XUAT();
 };
 
 void TAMGIAC::NHAP()
 {
-    cout << "- Canh a: "; cin >> a;
-    cout << "- Canh b: "; cin >> b;
-    cout << "- Canh c: "; cin >> c;
+    cout << "- Cac canh cua tam giac lan luot la: "; cin >> a >> b >> c;
 }
 
-bool TAMGIAC::HOPLE()
+bool TAMGIAC::CHECK()
 {
     return (a + b > c) && (a + c > b) && (b + c > a);
 }
-
-float TAMGIAC::CHUVI()
+void TAMGIAC::XUAT()
 {
-    return a + b + c;
+    float p = ( a + b + c ) / 2;
+    cout << " Chu vi cua tam giac la: " << 2 * p;
+    cout << " Dien tich cua tam giac la: " << sqrt(p * (p - a) * (p - b) * (p - c));
 }
-
-float TAMGIAC::DIENTICH()
-{
-    float p = CHUVI() / 2;
-    return sqrt(p * (p - a) * (p - b) * (p - c));
-}
-
 int main()
 {
     TAMGIAC tg;
     tg.NHAP();
-
-    if (!tg.HOPLE()) {
+    if (!tg.CHECK()) {
         cout << "Ba canh khong tao thanh tam giac!" << endl;
         return 0;
     }
-
-    cout << "Chu vi: " << tg.CHUVI() << endl;
-    cout << "Dien tich: " << tg.DIENTICH() << endl;
+    tg.XUAT();
     return 0;
 }

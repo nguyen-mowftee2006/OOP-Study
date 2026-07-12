@@ -34,9 +34,9 @@ void HOCSINH::XUAT()
 
 int main()
 {
-    HOCSINH hs;
-    hs.NHAP();
+    HOCSINH a;
+    a.NHAP();
     cout << "=== Thong tin hoc sinh ===" << endl;
-    hs.XUAT();
+    a.XUAT();
     return 0;
 }

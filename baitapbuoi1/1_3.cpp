@@ -6,7 +6,7 @@ private:
     float a, b;
 public:
     void NHAP();
-    void GIAI();
+    void XUAT();
 };
 
 void PTBAC1::NHAP()
@@ -15,7 +15,7 @@ void PTBAC1::NHAP()
     cout << "- He so b: "; cin >> b;
 }
 
-void PTBAC1::GIAI()
+void PTBAC1::XUAT()
 {
     if (a == 0) {
         if (b == 0)
@@ -31,6 +31,6 @@ int main()
 {
     PTBAC1 pt;
     pt.NHAP();
-    pt.GIAI();
+    pt.XUAT();
     return 0;
 }
