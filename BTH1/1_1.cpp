@@ -14,29 +14,37 @@ public:
 
 void SINVIEN::Nhap()
 {
-    cout<<"\n ---Vui long nhap cac thong tin ben duoi---";
-
-    cout<<"\n - Ma sinh vien: ";fflush(stdin); gets(MSV);
-    cout<<"\n - Ho va ten: ";fflush(stdin); gets(HoTen);
-    cout<<"\n - Tuoi: ";cin >> tuoi;
-    cout<<"\n - Diem: ";cin >> diem;
+    cout << "---Vui long nhap cac thong tin ben duoi---" << endl;
+    cout << "- Ma sinh vien: "; cin.getline(MSV, 20);
+    cout << "- Ho va ten: "; cin.getline(HoTen, 50);
+    cout << "- Tuoi: "; cin >> tuoi;
+    cout << "- Diem: "; cin >> diem; cin.ignore();
 }
 
 void SINVIEN::Xuat()
 {
-    cout<<"\n #Thong tin sinh vien ";
-    cout<<"\n Ma sinh vien: "<<MSV;
-    cout<<"\n Ho va ten: "<<HoTen;
-    cout<<"\n Tuoi: "<<tuoi;
-    cout<<"\n Diem: "<<diem;
+    cout << "#Thong tin sinh vien" << endl;
+    cout << "Ma sinh vien: " << MSV << endl;
+    cout << "Ho va ten: " << HoTen << endl;
+    cout << "Tuoi: " << tuoi << endl;
+    cout << "Diem: " << diem << endl;
 }
 
 int main()
 {
-    cout<<"\n Bien dich thanh cong!";
     SINVIEN a, b;
-    a.Nhap(); a.Xuat();
-    cout<<"---------------------------------";
-    b.Nhap(); b.Xuat();
+
+    cout << "=== Nhap thong tin sinh vien A ===" << endl;
+    a.Nhap();
+
+    cout << "=== Nhap thong tin sinh vien B ===" << endl;
+    b.Nhap();
+
+    cout << "=== Thong tin sinh vien A ===" << endl;
+    a.Xuat();
+
+    cout << "=== Thong tin sinh vien B ===" << endl;
+    b.Xuat();
+
     return 0;
 }
