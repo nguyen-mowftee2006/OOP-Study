@@ -23,18 +23,13 @@ public:
     double gia;
 
     void nhap(){
-        fflush(stdin);
-        cout<<"\nNhan hieu: "; gets(nh);
-        fflush(stdin);
-        cout<<"\nHang san xuat: "; gets(hsx);
-        fflush(stdin);
-        cout<<"\nKieu dang: "; gets(kd);
-        fflush(stdin);
-        cout<<"\nMau son: "; gets(ms);
+        cout<<"\nNhan hieu: "; fflush(stdin); gets(nh);
+        cout<<"\nHang san xuat: "; fflush(stdin); gets(hsx);
+        cout<<"\nKieu dang: "; fflush(stdin); gets(kd);
+        cout<<"\nMau son: "; fflush(stdin); gets(ms);
         cout<<"\nNgay san xuat:";
         nsx.nhap();
-        fflush(stdin);
-        cout<<"\nXuat xu: "; gets(xx);
+        cout<<"\nXuat xu: "; fflush(stdin); gets(xx);
         cout<<"\nGia ban: "; cin>>gia;
     }
 
