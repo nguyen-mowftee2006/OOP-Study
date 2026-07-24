@@ -1,84 +1,130 @@
-#include <iostream>
-#include <cstring>
+#include<bits/stdc++.h>
 using namespace std;
 
-class Date {
+class Date{
 public:
-    int day, month, year;
-    void nhap() { cin >> day >> month >> year; }
-    void xuat() { cout << day << "/" << month << "/" << year; }
-};
+    int d,m,y;
 
-class DiaChi {
-public:
-    char dienThoai[12], phuong[30], quan[30], thanhPho[30];
-    void nhap() {
-        cin.ignore();
-        cout << "Dien thoai: "; cin.getline(dienThoai, 12);
-        cout << "Phuong: "; cin.getline(phuong, 30);
-        cout << "Quan: "; cin.getline(quan, 30);
-        cout << "Thanh pho: "; cin.getline(thanhPho, 30);
+    void nhap(){
+        cout<<"Ngay: "; cin>>d;
+        cout<<"Thang: "; cin>>m;
+        cout<<"Nam: "; cin>>y;
     }
-    void xuat() { cout << phuong << ", " << quan << ", " << thanhPho; }
-};
-
-class DoanhNghiep {
-public:
-    int maDn;
-    char tenDn[60];
-    Date ngayTl;
-    DiaChi diaChi;
-    char giamDoc[30];
-    long doanhThu;
-
-    void nhap() {
-        cout << "Ma DN: "; cin >> maDn;
-        cout << "Ten DN: "; cin.ignore(); cin.getline(tenDn, 60);
-        cout << "Ngay thanh lap: "; ngayTl.nhap();
-        diaChi.nhap();
-        cout << "Giam doc: "; cin.ignore(); cin.getline(giamDoc, 30);
-        cout << "Doanh thu: "; cin >> doanhThu;
-    }
-
-    void xuat() {
-        cout << maDn << " - " << tenDn << " - ";
-        ngayTl.xuat();
-        cout << " - "; diaChi.xuat();
-        cout << " - " << giamDoc << " - " << doanhThu << endl;
+    void xuat(){
+        cout<<d<<"/"<<m<<"/"<<y;
     }
 };
 
-int main() {
-    int n;
-    cout << "So luong doanh nghiep (0<n<20): "; cin >> n;
+class DiaChi{
+public:
+    char sdt[15],p[30],q[30],tp[30];
 
-    DoanhNghiep dn[20];
-    for (int i = 0; i < n; i++) {
-        cout << "\nNhap doanh nghiep " << i + 1 << ":\n";
-        dn[i].nhap();
+    void nhap(){
+        cout<<"SDT: "; fflush(stdin); gets(sdt);
+        cout<<"Phuong: "; fflush(stdin); gets(p);
+        cout<<"Quan: "; fflush(stdin); gets(q);
+        cout<<"Thanh pho: "; fflush(stdin); gets(tp);
     }
 
-    cout << "\n-- Danh sach doanh nghiep --\n";
-    for (int i = 0; i < n; i++) dn[i].xuat();
+    void xuat(){
+        cout<<p<<", "<<q<<", "<<tp;
+    }
+};
 
-    cout << "\n-- Doanh nghiep o Ha Noi --\n";
-    for (int i = 0; i < n; i++)
-        if (strcmp(dn[i].diaChi.thanhPho, "Ha Noi") == 0) dn[i].xuat();
-
-    long tong = 0;
-    for (int i = 0; i < n; i++)
-        if (dn[i].ngayTl.year == 2015) tong += dn[i].doanhThu;
-    cout << "\nTong doanh thu DN thanh lap nam 2015: " << tong << endl;
-
+class DoanhNghiep{
+public:
     int ma;
-    cout << "\nNhap ma DN can sua: "; cin >> ma;
-    for (int i = 0; i < n; i++) {
-        if (dn[i].maDn == ma) {
-            cout << "Nhap lai thong tin:\n";
-            dn[i].nhap();
-            break;
+    char ten[50];
+    Date ntl;
+    DiaChi dc;
+    char gd[30];
+    long dt;
+
+    void nhap(){
+        cout<<"Ma DN: "; cin>>ma;
+        cout<<"Ten DN: "; fflush(stdin); gets(ten);
+        cout<<"Ngay thanh lap:\n"; ntl.nhap();
+        cout<<"Dia chi:\n"; dc.nhap();
+        cout<<"Giam doc: ";  fflush(stdin); gets(gd);
+        cout<<"Doanh thu: "; cin>>dt;
+    }
+    void xuat(){
+        cout<<ma<<"\t"<<ten<<"\t";
+        ntl.xuat();
+        cout<<"\t";
+        dc.xuat();
+        cout<<"\t"<<gd<<"\t"<<dt<<endl;
+    }
+};
+class QuanLy{
+public:
+    int n;
+    DoanhNghiep ds[20];
+
+    void nhap(){
+        do{
+            cout<<"Nhap n: ";
+            cin>>n;
+        }while(n<=0||n>=20);
+
+        for(int i=0;i<n;i++){
+            cout<<"\nNhap DN "<<i+1<<":\n";
+            ds[i].nhap();
         }
     }
 
+    void xuat(){
+        cout<<"\n===== DANH SACH DOANH NGHIEP =====\n";
+        for(int i=0;i<n;i++)
+            ds[i].xuat();
+    }
+
+    void haNoi(){
+        cout<<"\n===== DOANH NGHIEP O HA NOI =====\n";
+        for(int i=0;i<n;i++)
+            if(strcmp(ds[i].dc.tp,"Ha Noi")==0)
+                ds[i].xuat();
+    }
+
+    void tong2015(){
+        long s=0;
+        for(int i=0;i<n;i++)
+            if(ds[i].ntl.y==2015)
+                s+=ds[i].dt;
+
+        cout<<"\nTong doanh thu nam 2015: "<<s<<endl;
+    }
+
+    void sua(){
+        int ma;
+
+        cout<<"\nNhap ma DN can sua: ";
+        cin>>ma;
+
+        for(int i=0;i<n;i++)
+            if(ds[i].ma==ma){
+                cout<<"\nNhap lai thong tin:\n";
+                ds[i].nhap();
+                return;
+            }
+
+        cout<<"Khong tim thay!\n";
+    }
+
+    void xuly(){
+        xuat();
+        haNoi();
+        tong2015();
+        sua();
+
+        cout<<"\n===== DANH SACH SAU KHI SUA =====\n";
+        xuat();
+    }
+};
+
+int main(){
+    QuanLy q;
+    q.nhap();
+    q.xuly();
     return 0;
 }

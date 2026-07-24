@@ -1,48 +1,46 @@
-#include <iostream>
-#include <cstring>
+#include<bits/stdc++.h>
 using namespace std;
 
-class HocSinh {
+class HOCSINH{
 public:
-    char hoTen[50], queQuan[50];
+    char ten[30],que[30];
     int tuoi;
-    float diemToan, diemLy, diemHoa;
+    float toan,ly,hoa;
 
-    HocSinh() {
-        strcpy(hoTen, "Chua co ten");
-        tuoi = 0;
-        strcpy(queQuan, "Chua ro");
-        diemToan = diemLy = diemHoa = 0;
+    HOCSINH(){
+        strcpy(ten,"");
+        strcpy(que,"");
+        tuoi=0;
+        toan=ly=hoa=0;
     }
 
-    HocSinh(const char *hoTen, int tuoi, const char *queQuan,
-            float diemToan, float diemLy, float diemHoa) {
-        strcpy(this->hoTen, hoTen);
-        this->tuoi = tuoi;
-        strcpy(this->queQuan, queQuan);
-        this->diemToan = diemToan;
-        this->diemLy = diemLy;
-        this->diemHoa = diemHoa;
+    HOCSINH(char ten[],int tuoi,char que[],float toan,float ly,float hoa){
+        strcpy(this->ten,ten);
+        this->tuoi=tuoi;
+        strcpy(this->que,que);
+        this->toan=toan;
+        this->ly=ly;
+        this->hoa=hoa;
     }
 
-    void xuat() {
-        cout << "Ho ten: " << hoTen << endl;
-        cout << "Tuoi: " << tuoi << endl;
-        cout << "Que quan: " << queQuan << endl;
-        cout << "Diem toan: " << diemToan << endl;
-        cout << "Diem ly: " << diemLy << endl;
-        cout << "Diem hoa: " << diemHoa << endl;
+    void xuat(){
+        cout<<"\nHo ten: "<<ten;
+        cout<<"\nTuoi: "<<tuoi;
+        cout<<"\nQue quan: "<<que;
+        cout<<"\nDiem Toan: "<<toan;
+        cout<<"\nDiem Ly: "<<ly;
+        cout<<"\nDiem Hoa: "<<hoa<<endl;
     }
 };
 
-int main() {
-    HocSinh a;
-    HocSinh b("Nguyen Van B", 18, "Ha Noi", 8.5, 7.0, 9.0);
+int main(){
+    HOCSINH a;
+    HOCSINH b("Nguyen Van A",20,"Ha Noi",8,7.5,9);
 
-    cout << "-- Hoc sinh A --\n";
+    cout<<"\n===== Hoc sinh a =====";
     a.xuat();
 
-    cout << "\n-- Hoc sinh B --\n";
+    cout<<"\n===== Hoc sinh b =====";
     b.xuat();
 
     return 0;

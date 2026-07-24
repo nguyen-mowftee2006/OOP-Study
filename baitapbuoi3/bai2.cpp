@@ -1,81 +1,117 @@
-#include <iostream>
-#include <cstring>
+#include<bits/stdc++.h>
 using namespace std;
 
-class Date {
+class Date{
 public:
-    int day, month, year;
-    void nhap() { cin >> day >> month >> year; }
-    void xuat() { cout << day << "/" << month << "/" << year; }
-};
+    int d,m,y;
 
-class XeHoi {
-public:
-    char nhanHieu[30], hangSanXuat[30], kieuDang[30], mauSon[20], xuatXu[30];
-    Date namSanXuat;
-    double giaBan;
-
-    void nhap() {
-        cin.ignore();
-        cout << "Nhan hieu: "; cin.getline(nhanHieu, 30);
-        cout << "Hang san xuat: "; cin.getline(hangSanXuat, 30);
-        cout << "Kieu dang: "; cin.getline(kieuDang, 30);
-        cout << "Mau son: "; cin.getline(mauSon, 20);
-        cout << "Ngay san xuat: "; namSanXuat.nhap();
-        cin.ignore();
-        cout << "Xuat xu: "; cin.getline(xuatXu, 30);
-        cout << "Gia ban: "; cin >> giaBan;
+    void nhap(){
+        cout<<"\nNgay: "; cin>>d;
+        cout<<"\nThang: "; cin>>m;
+        cout<<"\nNam: "; cin>>y;
     }
 
-    void xuat() {
-        cout << nhanHieu << " - " << hangSanXuat << " - " << kieuDang
-             << " - " << mauSon << " - ";
-        namSanXuat.xuat();
-        cout << " - " << xuatXu << " - " << giaBan << endl;
+    void xuat(){
+        cout<<d<<"/"<<m<<"/"<<y;
     }
 };
 
-int main() {
+class XeHoi{
+public:
+    char nh[30],hsx[30],kd[30],ms[20],xx[30];
+    Date nsx;
+    double gia;
+
+    void nhap(){
+        fflush(stdin);
+        cout<<"\nNhan hieu: "; gets(nh);
+        fflush(stdin);
+        cout<<"\nHang san xuat: "; gets(hsx);
+        fflush(stdin);
+        cout<<"\nKieu dang: "; gets(kd);
+        fflush(stdin);
+        cout<<"\nMau son: "; gets(ms);
+        cout<<"\nNgay san xuat:";
+        nsx.nhap();
+        fflush(stdin);
+        cout<<"\nXuat xu: "; gets(xx);
+        cout<<"\nGia ban: "; cin>>gia;
+    }
+
+    void xuat(){
+        cout<<nh<<"\t"<<hsx<<"\t"<<kd<<"\t"<<ms<<"\t";
+        nsx.xuat();
+        cout<<"\t"<<xx<<"\t"<<gia<<endl;
+    }
+};
+class QuanLy{
+public:
     int n;
-    cout << "So luong xe hoi (0<n<20): "; cin >> n;
+    XeHoi *ds;
 
-    XeHoi *dsXe = new XeHoi[n];
+    void nhap(){
+        do{
+            cout<<"\nNhap n: "; cin>>n;
+        }while(n<=0||n>=20);
 
-    for (int i = 0; i < n; i++) {
-        cout << "\nNhap xe hoi " << i + 1 << ":\n";
-        (dsXe + i)->nhap();
-    }
+        ds=new XeHoi[n];
 
-    cout << "\n-- Danh sach xe hoi --\n";
-    for (int i = 0; i < n; i++) (dsXe + i)->xuat();
-
-    cout << "\n-- Xe hoi hang Toyota --\n";
-    for (int i = 0; i < n; i++)
-        if (strcmp((dsXe + i)->hangSanXuat, "Toyota") == 0) (dsXe + i)->xuat();
-
-    int dem = 0;
-    cout << "\n-- Xe san xuat thang 5/2025 --\n";
-    for (int i = 0; i < n; i++) {
-        if ((dsXe + i)->namSanXuat.month == 5 && (dsXe + i)->namSanXuat.year == 2025) {
-            (dsXe + i)->xuat();
-            dem++;
+        for(int i=0;i<n;i++){
+            cout<<"\n===== XE "<<i+1<<" =====";
+            (ds+i)->nhap();
         }
     }
-    cout << "So luong: " << dem << endl;
 
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - 1 - i; j++) {
-            if ((dsXe + j)->giaBan > (dsXe + j + 1)->giaBan) {
-                XeHoi tam = *(dsXe + j);
-                *(dsXe + j) = *(dsXe + j + 1);
-                *(dsXe + j + 1) = tam;
+    void xuat(){
+        cout<<"\n\n===== DANH SACH XE =====\n";
+        for(int i=0;i<n;i++) (ds+i)->xuat();
+    }
+
+    void toyota(){
+        cout<<"\n\n===== XE HANG TOYOTA =====\n";
+        for(int i=0;i<n;i++)
+            if(strcmp((ds+i)->hsx,"Toyota")==0)
+                (ds+i)->xuat();
+    }
+
+    void dem(){
+        int d=0;
+
+        cout<<"\n\n===== XE SAN XUAT THANG 5/2025 =====\n";
+
+        for(int i=0;i<n;i++)
+            if((ds+i)->nsx.m==5&&(ds+i)->nsx.y==2025){
+                (ds+i)->xuat();
+                d++;
             }
-        }
+
+        cout<<"\nSo luong: "<<d<<endl;
     }
 
-    cout << "\n-- Danh sach sau khi sap xep gia tang dan --\n";
-    for (int i = 0; i < n; i++) (dsXe + i)->xuat();
+    void sapxep(){
+        for(int i=0;i<n-1;i++)
+            for(int j=i+1;j<n;j++)
+                if((ds+i)->gia>(ds+j)->gia){
+                    XeHoi t=*(ds+i);
+                    *(ds+i)=*(ds+j);
+                    *(ds+j)=t;
+                }
 
-    delete[] dsXe;
+        cout<<"\n\n===== DANH SACH SAU SAP XEP =====\n";
+        xuat();
+    }
+
+    void xuly(){
+        xuat();
+        toyota();
+        dem();
+        sapxep();
+    }
+};
+
+int main(){
+    QuanLy q;
+    q.nhap();
+    q.xuly();
     return 0;
 }

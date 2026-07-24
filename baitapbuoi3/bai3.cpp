@@ -1,107 +1,149 @@
-#include <iostream>
-#include <cstring>
+#include<bits/stdc++.h>
+#include<iomanip>
 using namespace std;
 
-class Date {
+class Date{
 public:
-    int day, month, year;
-    void nhap() { cin >> day >> month >> year; }
-    void xuat() { cout << day << "/" << month << "/" << year; }
-};
+    int d,m,y;
 
-class NhaCungCap {
-public:
-    char maNcc[10], tenNcc[60], diaChi[60], sdt[12];
-    void nhap() {
-        cout << "Ma NCC: "; cin >> maNcc;
-        cin.ignore();
-        cout << "Ten NCC: "; cin.getline(tenNcc, 60);
-        cout << "Dia chi: "; cin.getline(diaChi, 60);
-        cout << "SDT: "; cin.getline(sdt, 12);
+    void nhap(){
+        cout<<"\nNgay: "; cin>>d;
+        cout<<"\nThang: "; cin>>m;
+        cout<<"\nNam: "; cin>>y;
     }
-    void xuat() {
-        cout << maNcc << " - " << tenNcc << " - " << diaChi << " - " << sdt << endl;
+
+    void xuat(){
+        cout<<d<<"/"<<m<<"/"<<y;
     }
 };
 
-class SanPham {
+class NCC{
 public:
-    char maSp[10], tenSp[60];
-    int soLuong;
-    double donGia, thanhTien;
+    char ma[20],ten[50],dc[50],sdt[15];
 
-    void nhap() {
-        cout << "Ma SP: "; cin >> maSp;
-        cin.ignore();
-        cout << "Ten SP: "; cin.getline(tenSp, 60);
-        cout << "So luong: "; cin >> soLuong;
-        cout << "Don gia: "; cin >> donGia;
-        thanhTien = donGia * soLuong;
+    void nhap(){
+        cout<<"\nMa NCC: ";fflush(stdin); gets(ma);
+        cout<<"\nTen NCC: ";fflush(stdin); gets(ten);
+        cout<<"\nDia chi: ";fflush(stdin); gets(dc);
+        cout<<"\nSDT: ";fflush(stdin); gets(sdt);
     }
-    void xuat() {
-        cout << maSp << "\t" << tenSp << "\t" << soLuong << "\t"
-             << donGia << "\t" << thanhTien << endl;
+
+    void xuat(){
+        cout<<"\nMa nha cung cap: "<<ma;
+        cout<<"\nTen nha cung cap: "<<ten;
+        cout<<"\nDia chi: "<<dc;
+        cout<<"\nSDT: "<<sdt;
     }
 };
 
-class PhieuNhap {
+class SanPham{
 public:
-    char maPhieu[10];
-    Date ngayLap;
-    NhaCungCap ncc;
+    char ma[20],ten[30];
+    int sl;
+    float dg;
+
+    void nhap(){
+        cout<<"\nMa SP: "; fflush(stdin); gets(ma);
+        cout<<"\nTen SP: "; fflush(stdin); gets(ten);
+        cout<<"\nSo luong: "; cin>>sl;
+        cout<<"\nDon gia: "; cin>>dg;
+    }
+
+    void xuat(){
+        cout<<left
+            <<setw(10)<<ma
+            <<setw(25)<<ten
+            <<setw(10)<<sl
+            <<setw(15)<<dg
+            <<setw(15)<<sl*dg<<endl;
+    }
+};
+class Phieu{
+public:
+    char mp[20];
+    Date nl;
+    NCC ncc;
+    int n;
     SanPham sp[20];
-    int soLuongSp;
-    double tongTien;
 
-    void nhap() {
-        cout << "Ma phieu: "; cin >> maPhieu;
-        cout << "Ngay lap: "; ngayLap.nhap();
+    void nhap(){
+        cout<<"\nMa phieu: ";  fflush(stdin);gets(mp);
+        cout<<"\nNgay lap:"; nl.nhap(); 
+        cout<<"\nNhap thong tin nha cung cap:";
         ncc.nhap();
-        cout << "So luong san pham: "; cin >> soLuongSp;
-        for (int i = 0; i < soLuongSp; i++) {
-            cout << "San pham " << i + 1 << ":\n";
+
+        do{
+            cout<<"\nNhap so SP: "; cin>>n;
+        }while(n<=0||n>=20);
+
+        for(int i=0;i<n;i++){
+            cout<<"\nNhap SP "<<i+1;
             sp[i].nhap();
         }
-        tongTien = 0;
-        for (int i = 0; i < soLuongSp; i++) tongTien += sp[i].thanhTien;
     }
 
-    void xuat() {
-        cout << "\nMa phieu: " << maPhieu << " - Ngay lap: "; ngayLap.xuat(); cout << endl;
+    void xuat(){
+        float tong=0;
+
+        cout<<"\n\n\t\tPHIEU NHAP VAN PHONG PHAM";
+        cout<<"\nMa phieu: "<<mp;
+        cout<<"\nNgay lap: "; nl.xuat();
         ncc.xuat();
-        cout << "Ma SP\tTen SP\tSL\tDon gia\tThanh tien\n";
-        for (int i = 0; i < soLuongSp; i++) sp[i].xuat();
-        cout << "TONG: " << tongTien << endl;
+
+        cout<<"\n\n";
+        cout<<left
+            <<setw(10)<<"Ma SP"
+            <<setw(25)<<"Ten san pham"
+            <<setw(10)<<"SL"
+            <<setw(15)<<"Don gia"
+            <<setw(15)<<"Thanh tien"<<endl;
+
+        for(int i=0;i<n;i++){
+            sp[i].xuat();
+            tong+=sp[i].sl*sp[i].dg;
+        }
+
+        cout<<"\nTong: "<<tong<<endl;
+    }
+
+    void dem(){
+        int d=0;
+        for(int i=0;i<n;i++)
+            if(sp[i].sl<80) d++;
+
+        cout<<"\nSo san pham co SL < 80: "<<d<<endl;
+    }
+
+    void sapxep(){
+        for(int i=0;i<n-1;i++)
+            for(int j=i+1;j<n;j++)
+                if(sp[i].dg<sp[j].dg){
+                    SanPham t=sp[i];
+                    sp[i]=sp[j];
+                    sp[j]=t;
+                }
+
+        cout<<"\n\nSau khi sap xep:";
+        xuat();
+    }
+
+    void sua(){
+        strcpy(ncc.ten,"Cong ty TNHH Thanh Do");
+        cout<<"\n\nSau khi sua ten nha cung cap:";
+        xuat();
+    }
+
+    void xuly(){
+        xuat();
+        dem();
+        sapxep();
+        sua();
     }
 };
 
-int main() {
-    PhieuNhap phieu;
-    phieu.nhap();
-
-    cout << "\n-- Phieu vua nhap --";
-    phieu.xuat();
-
-    int dem = 0;
-    for (int i = 0; i < phieu.soLuongSp; i++)
-        if (phieu.sp[i].soLuong < 80) dem++;
-    cout << "\nSo san pham co so luong < 80: " << dem << endl;
-
-    for (int i = 0; i < phieu.soLuongSp - 1; i++) {
-        for (int j = 0; j < phieu.soLuongSp - 1 - i; j++) {
-            if (phieu.sp[j].donGia < phieu.sp[j + 1].donGia) {
-                SanPham tam = phieu.sp[j];
-                phieu.sp[j] = phieu.sp[j + 1];
-                phieu.sp[j + 1] = tam;
-            }
-        }
-    }
-    cout << "\n-- Phieu sau khi sap xep giam dan don gia --";
-    phieu.xuat();
-
-    strcpy(phieu.ncc.tenNcc, "Cong ty TNHH Thanh Do");
-    cout << "\n-- Phieu sau khi sua ten nha cung cap --";
-    phieu.xuat();
-
+int main(){
+    Phieu p;
+    p.nhap();
+    p.xuly();
     return 0;
 }
