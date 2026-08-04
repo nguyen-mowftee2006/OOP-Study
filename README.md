@@ -40,7 +40,7 @@ git clone https://github.com/nguyen-mowftee2006/OOP-Study
 
 ## ⚠️ Ghi chú
 
-Thư mục 'baithuchanh' và phiếu giao không chứa đề bài do tài liệu lưu hành nội bộ, bạn vẫn có thể "tham khảo đề bài" thông qua code
+Thư mục baithuchanh và phiếu giao không chứa đề bài do tài liệu lưu hành nội bộ, bạn vẫn có thể "tham khảo đề bài" thông qua code
 
 Các chương trình được viết theo quy ước của học phần và mốc kiến thức của từng buổi. Một số bài sử dụng `fflush(stdin); gets(...)` theo yêu cầu của môn học, vì vậy nên biên dịch bằng Dev-C++/TDM-GCC tương thích.
 
