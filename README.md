@@ -18,9 +18,35 @@ Bạn có thể clone repo về và chạy thử các file code:
 git clone https://github.com/nguyen-mowftee2006/OOP-Study
 ```
 
+## 📂 Danh mục bài tập
+
+### Bài tập trên lớp
+
+- [Buổi 1](baitaptrenlop/baitapbuoi1): Lớp và đối tượng cơ bản
+- [Buổi 2](baitaptrenlop/baitapbuoi2): Quan hệ kết tập và bài tập dạng phiếu
+- [Buổi 3](baitaptrenlop/baitapbuoi3): Mảng, con trỏ và phương thức khởi tạo
+- [Buổi 4](baitaptrenlop/baitapbuoi4): Kế thừa
+
+### Bài thực hành
+
+- [Bài thực hành 1](baithuchanh/baithuchanh1)
+- [Bài thực hành 2](baithuchanh/baithuchanh2)
+- [Bài thực hành 3](baithuchanh/baithuchanh3)
+- [Bài thực hành 4](baithuchanh/baithuchanh4)
+- [Bài thực hành 5](baithuchanh/baithuchanh5)
+- [Bài thực hành Online 1](btho/btho1)
+- [Bài thực hành Online 2](btho/btho2)
+- [Bài thực hành Online 3](btho/btho3)
+
+### Phiếu giao bài tập
+
+- [Assignment 1](ASSIGNMENT1_NGUYENHUUMINHTHANH.CPP)
+- [Assignment 2](ASSIGNMENT2_NGUYENHUUMINHTHANH.CPP)
+- [Assignment 3](ASSIGNMENT3_NGUYENHUUMINHTHANH.CPP)
+
 ## ⚠️ Ghi chú
 
-Một số bài sử dụng trình biên dịch GCC mới, nên không sử dụng các hàm cũ như `gets`. Code cũng không đúng hoàn toàn, bạn tham khảo thôi nhé!
+Các chương trình được viết theo quy ước của học phần và mốc kiến thức của từng buổi. Một số bài sử dụng `fflush(stdin); gets(...)` theo yêu cầu của môn học, vì vậy nên biên dịch bằng Dev-C++/TDM-GCC tương thích.
 
 ## 💬 Đóng góp
 
