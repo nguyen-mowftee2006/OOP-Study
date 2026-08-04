@@ -48,6 +48,10 @@ git clone https://github.com/nguyen-mowftee2006/OOP-Study
 
 Các chương trình được viết theo quy ước của học phần và mốc kiến thức của từng buổi. Một số bài sử dụng `fflush(stdin); gets(...)` theo yêu cầu của môn học, vì vậy nên biên dịch bằng Dev-C++/TDM-GCC tương thích.
 
+### Biên dịch và chạy trong VS Code
+
+Mở file `.cpp` cần chạy rồi nhấn `Ctrl+Shift+B`. VS Code sẽ gọi [compiler.ps1](compiler.ps1) để biên dịch bằng TDM-GCC của Dev-C++, chạy chương trình và tự xóa file thực thi tạm.
+
 ## 💬 Đóng góp
 
 Nếu thấy code có gì chưa ổn, hoặc có cách làm hay hơn, đừng ngại để lại issue hoặc pull request nhé!

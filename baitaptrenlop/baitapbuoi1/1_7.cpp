@@ -9,7 +9,7 @@ private:
 public:
     void NHAP()
     {
-        cout << "Nhap ma can bo: "; fflush(stdin); gets(ma);
+        cout << "\nNhap ma can bo: "; fflush(stdin); gets(ma);
         cout << "\nNhap ho ten: "; fflush(stdin); gets(hoten);
         cout << "\nNhap ngay sinh: "; fflush(stdin); gets(ngaysinh);
         cout << "\nNhap so ngay lam viec: "; cin >> songaylam;
@@ -27,7 +27,7 @@ public:
 int main()
 {
     CANBO a;
-    cout << "NHAP THONG TIN CAN BO";
+    cout << "\nNHAP THONG TIN CAN BO";
     a.NHAP();
     cout << "\nTHONG TIN CAN BO";
     a.XUAT();

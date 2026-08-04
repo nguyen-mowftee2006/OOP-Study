@@ -22,7 +22,7 @@ protected:
 public:
     void NHAP()
     {
-        cout << "Nhap ma truong: "; fflush(stdin); gets(ma);
+        cout << "\nNhap ma truong: "; fflush(stdin); gets(ma);
         cout << "\nNhap ten truong: "; fflush(stdin); gets(ten);
         cout << "\nNhap dia chi: "; fflush(stdin); gets(diachi);
     }
@@ -94,7 +94,7 @@ public:
 int main()
 {
     TRUONGDH a;
-    cout << "NHAP THONG TIN TRUONG DAI HOC";
+    cout << "\nNHAP THONG TIN TRUONG DAI HOC";
     a.NHAP();
     cout << "\nTHONG TIN TRUONG DAI HOC";
     a.XUAT();

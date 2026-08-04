@@ -8,7 +8,7 @@ private:
 public:
     void NHAP()
     {
-        cout << "Nhap he so a: "; cin >> a;
+        cout << "\nNhap he so a: "; cin >> a;
         cout << "\nNhap he so b: "; cin >> b;
     }
     void GIAI()

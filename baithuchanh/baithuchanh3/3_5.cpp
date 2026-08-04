@@ -43,7 +43,7 @@ public:
 int main()
 {
     ARRAY a(5);
-    cout << "MANG A SAU KHI KHOI TAO:";
+    cout << "\nMANG A SAU KHI KHOI TAO:";
     a.XUAT();
     cout << "\nNHAP MANG A";
     a.NHAP();

@@ -84,7 +84,7 @@ int main()
     int n;
     do
     {
-        cout << "Nhap so sach giao khoa: "; cin >> n;
+        cout << "\nNhap so sach giao khoa: "; cin >> n;
     } while (n <= 0 || n > 100);
     for (int i = 0; i < n; i++)
     {

@@ -45,7 +45,7 @@ public:
 int main()
 {
     HANG a;
-    cout << "NHAP THONG TIN MAT HANG";
+    cout << "\nNHAP THONG TIN MAT HANG";
     a.NHAP();
     cout << "\nTHONG TIN MAT HANG";
     a.XUAT();

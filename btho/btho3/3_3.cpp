@@ -94,7 +94,7 @@ int main()
 {
     MATRIX<double> a;
     MATRIX<long> b;
-    cout << "NHAP MA TRAN KIEU DOUBLE"; cin >> a;
+    cout << "\nNHAP MA TRAN KIEU DOUBLE"; cin >> a;
     cout << "\nNHAP MA TRAN KIEU LONG"; cin >> b;
     MATRIX<double> c = ~a;
     MATRIX<long> d = ~b;

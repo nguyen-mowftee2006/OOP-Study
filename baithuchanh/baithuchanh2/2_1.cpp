@@ -39,7 +39,7 @@ public:
 int main()
 {
     NHANSU x;
-    cout << "NHAP THONG TIN NHAN SU";
+    cout << "\nNHAP THONG TIN NHAN SU";
     x.NHAP();
     cout << "\nTHONG TIN NHAN SU";
     x.XUAT();

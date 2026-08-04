@@ -95,7 +95,7 @@ int main()
     int n;
     do
     {
-        cout << "Nhap so doanh nghiep: "; cin >> n;
+        cout << "\nNhap so doanh nghiep: "; cin >> n;
     } while (n <= 0 || n >= 20);
     for (int i = 0; i < n; i++)
     {

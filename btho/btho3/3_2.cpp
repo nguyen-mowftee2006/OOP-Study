@@ -31,7 +31,7 @@ ostream &operator<<(ostream &os, TAMGIAC x)
 int main()
 {
     TAMGIAC p, q;
-    cout << "NHAP TAM GIAC P"; cin >> p;
+    cout << "\nNHAP TAM GIAC P"; cin >> p;
     cout << "\nNHAP TAM GIAC Q"; cin >> q;
     ofstream f("INOUT.txt");
     f << "TAM GIAC P";

@@ -58,7 +58,7 @@ public:
     }
     void NHAP()
     {
-        cout << "Nhap ma lop hoc: "; fflush(stdin); gets(ma);
+        cout << "\nNhap ma lop hoc: "; fflush(stdin); gets(ma);
         cout << "\nNhap ten lop hoc: "; fflush(stdin); gets(ten);
         cout << "\nNhap ngay mo: "; fflush(stdin); gets(ngaymo);
         cout << "\nNHAP THONG TIN GIAO VIEN";
@@ -110,7 +110,7 @@ public:
 int main()
 {
     LOPHOC a;
-    cout << "NHAP THONG TIN LOP HOC";
+    cout << "\nNHAP THONG TIN LOP HOC";
     a.NHAP();
     cout << "\nLOP HOC VUA NHAP";
     a.XUAT();

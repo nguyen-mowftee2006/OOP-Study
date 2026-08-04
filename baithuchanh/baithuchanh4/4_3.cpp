@@ -9,7 +9,7 @@ protected:
 public:
     void NHAP()
     {
-        cout << "Nhap nhan hieu: "; fflush(stdin); gets(nhanhieu);
+        cout << "\nNhap nhan hieu: "; fflush(stdin); gets(nhanhieu);
         cout << "\nNhap nam san xuat: "; cin >> namsx;
         cout << "\nNhap hang: "; fflush(stdin); gets(hang);
     }
@@ -63,7 +63,7 @@ int main()
 {
     OTO a;
     MOTO b;
-    cout << "NHAP XE O TO";
+    cout << "\nNHAP XE O TO";
     a.NHAP();
     cout << "\nNHAP XE MO TO";
     b.NHAP();

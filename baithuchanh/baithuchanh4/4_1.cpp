@@ -39,7 +39,7 @@ int main()
     int n;
     do
     {
-        cout << "Nhap so ky su: "; cin >> n;
+        cout << "\nNhap so ky su: "; cin >> n;
     } while (n <= 0);
     for (int i = 0; i < n; i++)
     {

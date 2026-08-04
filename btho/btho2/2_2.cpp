@@ -86,7 +86,7 @@ public:
 int main()
 {
     STUDENT a;
-    cout << "NHAP THONG TIN SINH VIEN";
+    cout << "\nNHAP THONG TIN SINH VIEN";
     a.input();
     a.SUA();
     cout << "\nTHONG TIN SINH VIEN";

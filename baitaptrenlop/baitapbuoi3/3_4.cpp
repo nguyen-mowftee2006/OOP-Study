@@ -33,7 +33,7 @@ int main()
 {
     HOCSINH a;
     HOCSINH b("Nguyen Van A", 20, "Ha Noi", 8, 7.5, 9);
-    cout << "HOC SINH A";
+    cout << "\nHOC SINH A";
     a.XUAT();
     cout << "\nHOC SINH B";
     b.XUAT();

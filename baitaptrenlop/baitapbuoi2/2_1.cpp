@@ -25,7 +25,7 @@ private:
 public:
     void NHAP()
     {
-        cout << "Nhap hang san xuat: "; fflush(stdin); gets(hangsx);
+        cout << "\nNhap hang san xuat: "; fflush(stdin); gets(hangsx);
         cout << "\nNHAP NAM SAN XUAT";
         namsx.NHAP();
         cout << "\nNhap gia ban: "; cin >> giaban;
@@ -43,7 +43,7 @@ public:
 int main()
 {
     XEHOI x;
-    cout << "NHAP THONG TIN XE HOI";
+    cout << "\nNHAP THONG TIN XE HOI";
     x.NHAP();
     cout << "\nTHONG TIN XE HOI";
     x.XUAT();

@@ -55,7 +55,7 @@ ostream &operator<<(ostream &os, MANG x)
 int main()
 {
     MANG a;
-    cout << "NHAP MANG"; cin >> a;
+    cout << "\nNHAP MANG"; cin >> a;
     ++a;
     cout << "\nMang tang dan:" << a;
     ofstream f("MANG.txt");

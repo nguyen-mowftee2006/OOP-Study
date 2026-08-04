@@ -47,7 +47,7 @@ private:
 public:
     void NHAP()
     {
-        cout << "Nhap ma phieu: "; fflush(stdin); gets(ma);
+        cout << "\nNhap ma phieu: "; fflush(stdin); gets(ma);
         cout << "\nNhap ngay lap: "; fflush(stdin); gets(ngaylap);
         cout << "\nNHAP THONG TIN NHA CUNG CAP";
         ncc.NHAP();
@@ -102,7 +102,7 @@ public:
 int main()
 {
     PHIEUNHAP p;
-    cout << "NHAP THONG TIN PHIEU";
+    cout << "\nNHAP THONG TIN PHIEU";
     p.NHAP();
     cout << "\nPHIEU VUA NHAP";
     p.XUAT();

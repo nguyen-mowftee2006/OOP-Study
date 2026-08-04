@@ -71,7 +71,7 @@ public:
 int main()
 {
     TIVI a;
-    cout << "NHAP THONG TIN TIVI";
+    cout << "\nNHAP THONG TIN TIVI";
     a.NHAP();
     cout << "\nTHONG TIN TIVI";
     a.XUAT();

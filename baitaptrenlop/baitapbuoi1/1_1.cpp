@@ -8,7 +8,7 @@ private:
 public:
     void NHAP()
     {
-        cout << "Nhap day lon: "; cin >> daylon;
+        cout << "\nNhap day lon: "; cin >> daylon;
         cout << "\nNhap day nho: "; cin >> daynho;
         cout << "\nNhap chieu cao: "; cin >> chieucao;
     }

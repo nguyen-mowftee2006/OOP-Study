@@ -18,7 +18,7 @@ private:
 public:
     void NHAP()
     {
-        cout << "Nhap trong luong: "; cin >> trongluong;
+        cout << "\nNhap trong luong: "; cin >> trongluong;
         cout << "\nNhap hang san xuat: "; fflush(stdin); gets(hangsx);
         cout << "\nNhap nam san xuat: "; cin >> namsx;
         cout << "\nNhap toc do: "; cin >> tocdo;
@@ -41,7 +41,7 @@ private:
 public:
     void NHAP()
     {
-        cout << "Nhap trong luong: "; cin >> trongluong;
+        cout << "\nNhap trong luong: "; cin >> trongluong;
         cout << "\nNhap hang san xuat: "; fflush(stdin); gets(hangsx);
         cout << "\nNhap nam san xuat: "; cin >> namsx;
         cout << "\nNhap toc do: "; cin >> tocdo;
@@ -61,7 +61,7 @@ int main()
 {
     LASERPRINTER a;
     DOTPRINTER b;
-    cout << "NHAP MAY IN LASER";
+    cout << "\nNHAP MAY IN LASER";
     a.NHAP();
     cout << "\nNHAP MAY IN KIM";
     b.NHAP();

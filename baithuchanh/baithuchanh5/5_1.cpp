@@ -38,7 +38,7 @@ ostream &operator<<(ostream &os, PHANSO x)
 int main()
 {
     PHANSO a, b, tich, thuong, tong, hieu;
-    cout << "NHAP PHAN SO THU NHAT"; cin >> a;
+    cout << "\nNHAP PHAN SO THU NHAT"; cin >> a;
     cout << "\nNHAP PHAN SO THU HAI"; cin >> b;
     tich = a * b; thuong = a / b; tong = a + b; hieu = a - b;
     cout << "\nTich: " << tich << " = " << (float)tich;

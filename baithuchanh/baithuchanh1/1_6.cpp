@@ -44,7 +44,7 @@ public:
 int main()
 {
     MANGTHUC a;
-    cout << "NHAP MANG SO THUC";
+    cout << "\nNHAP MANG SO THUC";
     a.NHAP();
     cout << "\nMang vua nhap:";
     a.XUAT();

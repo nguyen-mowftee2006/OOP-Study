@@ -65,7 +65,7 @@ public:
 int main()
 {
     PTB2 p(1, -3, 2), q;
-    cout << "PHUONG TRINH P: ";
+    cout << "\nPHUONG TRINH P: ";
     p.XUAT();
     p.GIAI();
     cout << "\nNHAP PHUONG TRINH Q";

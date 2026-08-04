@@ -37,7 +37,7 @@ public:
 int main()
 {
     MANGSO a;
-    cout << "NHAP MANG SO NGUYEN";
+    cout << "\nNHAP MANG SO NGUYEN";
     a.NHAP();
     a.SAPXEP();
     cout << "\nMang tang dan:";

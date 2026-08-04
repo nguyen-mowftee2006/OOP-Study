@@ -45,7 +45,7 @@ ostream &operator<<(ostream &os, PHANSO x)
 int main()
 {
     PHANSO a, b, c;
-    cout << "NHAP PHAN SO THU NHAT"; cin >> a;
+    cout << "\nNHAP PHAN SO THU NHAT"; cin >> a;
     cout << "\nNHAP PHAN SO THU HAI"; cin >> b;
     c = a * b;
     ofstream f("PHANSO.txt");

@@ -125,7 +125,7 @@ bool CungKichThuoc(MATRIX x, MATRIX y)
 int main()
 {
     MATRIX p, q;
-    cout << "NHAP MA TRAN P"; cin >> p;
+    cout << "\nNHAP MA TRAN P"; cin >> p;
     cout << "\nNHAP MA TRAN Q"; cin >> q;
     if (!CungKichThuoc(p, q))
     {

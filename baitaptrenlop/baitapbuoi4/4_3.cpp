@@ -42,7 +42,7 @@ int main()
     int n;
     do
     {
-        cout << "Nhap so cong chuc: "; cin >> n;
+        cout << "\nNhap so cong chuc: "; cin >> n;
     } while (n <= 0 || n > 50);
     for (int i = 0; i < n; i++)
     {

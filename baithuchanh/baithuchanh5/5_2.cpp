@@ -24,7 +24,7 @@ ostream &operator<<(ostream &os, SOPHUC x)
 int main()
 {
     float a1, b1, a2, b2;
-    cout << "Nhap phan thuc SP1: "; cin >> a1;
+    cout << "\nNhap phan thuc SP1: "; cin >> a1;
     cout << "\nNhap phan ao SP1: "; cin >> b1;
     cout << "\nNhap phan thuc SP2: "; cin >> a2;
     cout << "\nNhap phan ao SP2: "; cin >> b2;

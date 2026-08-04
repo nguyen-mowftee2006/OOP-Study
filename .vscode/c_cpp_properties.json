@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "TDM-GCC 9.2.0 (Dev-C++)",
+            "compilerPath": "C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/bin/g++.exe",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "cStandard": "c11",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}

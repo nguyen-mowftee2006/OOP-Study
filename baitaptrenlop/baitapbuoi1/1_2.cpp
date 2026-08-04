@@ -8,7 +8,7 @@ private:
 public:
     void NHAP()
     {
-        cout << "Nhap ban kinh: "; cin >> r;
+        cout << "\nNhap ban kinh: "; cin >> r;
     }
     float CHUVI() { return 2 * 3.14 * r; }
     float DIENTICH() { return 3.14 * r * r; }

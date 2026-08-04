@@ -27,7 +27,7 @@ public:
 int main()
 {
     SINHVIEN a, b;
-    cout << "NHAP THONG TIN SINH VIEN A";
+    cout << "\nNHAP THONG TIN SINH VIEN A";
     a.NHAP();
     cout << "\nNHAP THONG TIN SINH VIEN B";
     b.NHAP();

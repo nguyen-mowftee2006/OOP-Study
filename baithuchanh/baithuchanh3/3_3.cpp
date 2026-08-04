@@ -43,7 +43,7 @@ int main()
     int n;
     do
     {
-        cout << "Nhap so mat hang: "; cin >> n;
+        cout << "\nNhap so mat hang: "; cin >> n;
     } while (n <= 0 || n > 100);
     for (int i = 0; i < n; i++)
     {

@@ -27,7 +27,7 @@ public:
 int main()
 {
     HCN x;
-    cout << "NHAP HINH CHU NHAT";
+    cout << "\nNHAP HINH CHU NHAT";
     x.NHAP();
     cout << "\nHINH CHU NHAT";
     x.VE();

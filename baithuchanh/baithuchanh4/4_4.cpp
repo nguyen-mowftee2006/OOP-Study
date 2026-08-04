@@ -54,7 +54,7 @@ int main()
 {
     MAYGIAT a(2000, 220, 9, "Cua truoc");
     TULANH b(150, 220, 300, 3);
-    cout << "THONG TIN MAY GIAT";
+    cout << "\nTHONG TIN MAY GIAT";
     a.XUAT();
     cout << "\nTHONG TIN TU LANH";
     b.XUAT();

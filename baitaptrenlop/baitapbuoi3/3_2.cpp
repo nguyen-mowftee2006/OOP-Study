@@ -82,7 +82,7 @@ int main()
     int n;
     do
     {
-        cout << "Nhap so xe hoi: "; cin >> n;
+        cout << "\nNhap so xe hoi: "; cin >> n;
     } while (n <= 0);
     XEHOI *x = new XEHOI[n];
     for (int i = 0; i < n; i++)

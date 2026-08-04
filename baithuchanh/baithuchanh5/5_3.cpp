@@ -34,7 +34,7 @@ int main()
 {
     TAMTHUC p(1, 2, 3), q(2, -3, 4);
     p = -p; q = -q;
-    cout << "P sau khi doi dau: " << p;
+    cout << "\nP sau khi doi dau: " << p;
     cout << "\nQ sau khi doi dau: " << q;
     cout << "\nTong hai tam thuc: " << p + q;
     cout << "\nHieu hai tam thuc: " << p - q;
