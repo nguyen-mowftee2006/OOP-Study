@@ -27,6 +27,14 @@ git clone https://github.com/nguyen-mowftee2006/OOP-Study
 - [Buổi 3](baitaptrenlop/baitapbuoi3): Mảng, con trỏ và phương thức khởi tạo
 - [Buổi 4](baitaptrenlop/baitapbuoi4): Kế thừa
 
+### Đề bài tập trên lớp
+
+- [Mở thư mục đề bài](debai)
+- [Đề bài buổi 1](debai/BÀI%20TẬP%20AD%20BUỔI%201.pdf)
+- [Đề bài buổi 2](debai/BÀI%20TẬP%20AD%20BUỔI%202.pdf)
+- [Đề bài buổi 3](debai/BÀI%20TẬP%20AD%20BUỔI%203.pdf)
+- [Đề bài buổi 4](debai/BÀI%20TẬP%20AD%20BUỔI%204.pdf)
+
 ### Bài thực hành
 
 - [Bài thực hành 1](baithuchanh/baithuchanh1)
