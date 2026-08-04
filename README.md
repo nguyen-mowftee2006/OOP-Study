@@ -27,24 +27,10 @@ git clone https://github.com/nguyen-mowftee2006/OOP-Study
 - [Buổi 3](baitaptrenlop/baitapbuoi3): Mảng, con trỏ và phương thức khởi tạo
 - [Buổi 4](baitaptrenlop/baitapbuoi4): Kế thừa
 
-### Đề bài tập trên lớp
-
-- [Mở thư mục đề bài](debai)
-- [Đề bài buổi 1](debai/BÀI%20TẬP%20AD%20BUỔI%201.pdf)
-- [Đề bài buổi 2](debai/BÀI%20TẬP%20AD%20BUỔI%202.pdf)
-- [Đề bài buổi 3](debai/BÀI%20TẬP%20AD%20BUỔI%203.pdf)
-- [Đề bài buổi 4](debai/BÀI%20TẬP%20AD%20BUỔI%204.pdf)
-
 ### Bài thực hành
 
-- [Bài thực hành 1](baithuchanh/baithuchanh1)
-- [Bài thực hành 2](baithuchanh/baithuchanh2)
-- [Bài thực hành 3](baithuchanh/baithuchanh3)
-- [Bài thực hành 4](baithuchanh/baithuchanh4)
-- [Bài thực hành 5](baithuchanh/baithuchanh5)
-- [Bài thực hành Online 1](btho/btho1)
-- [Bài thực hành Online 2](btho/btho2)
-- [Bài thực hành Online 3](btho/btho3)
+- [Bài thực hành](baithuchanh)
+- [Bài thực hành Online](btho)
 
 ### Phiếu giao bài tập
 
@@ -53,6 +39,8 @@ git clone https://github.com/nguyen-mowftee2006/OOP-Study
 - [Assignment 3](ASSIGNMENT3_NGUYENHUUMINHTHANH.CPP)
 
 ## ⚠️ Ghi chú
+
+Thư mục 'baithuchanh' và phiếu giao không chứa đề bài do tài liệu lưu hành nội bộ, bạn vẫn có thể "tham khảo đề bài" thông qua code
 
 Các chương trình được viết theo quy ước của học phần và mốc kiến thức của từng buổi. Một số bài sử dụng `fflush(stdin); gets(...)` theo yêu cầu của môn học, vì vậy nên biên dịch bằng Dev-C++/TDM-GCC tương thích.
 
