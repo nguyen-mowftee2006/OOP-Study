@@ -1,12 +1,10 @@
 # 👋 Chào mừng bạn đến với repo của tôi!
 
-Đây là nơi tôi lưu lại quá trình học và thực hành **lập trình hướng đối tượng (OOP)**.
-
-## 📌 Mục đích
+Đây là nơi tôi lưu lại quá trình học và thực hành **lập trình hướng đối tượng (OOP) của C++**
 
 Mình public repo này chủ yếu để:
 
-- Ghi lại quá trình học tập của bản thân
+- Ghi lại quá trình học tập
 - Chia sẻ để mọi người cùng tham khảo, góp ý
 - Ôn lại kiến thức khi cần
 
@@ -15,7 +13,7 @@ Mình public repo này chủ yếu để:
 Bạn có thể clone repo về và chạy thử các file code:
 
 ```bash
-git clone --depth 1 https://github.com/nguyen-mowftee2006/OOP-Study
+git clone --depth 1 https://github.com/nguyen-mowftee2006/ôpc
 ```
 
 ## 📂 Danh mục bài tập
