@@ -15,7 +15,7 @@ Mình public repo này chủ yếu để:
 Bạn có thể clone repo về và chạy thử các file code:
 
 ```bash
-git clone https://github.com/nguyen-mowftee2006/OOP-Study
+git clone --depth 1 https://github.com/nguyen-mowftee2006/OOP-Study
 ```
 
 ## 📂 Danh mục bài tập
