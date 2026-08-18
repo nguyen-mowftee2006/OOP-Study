@@ -1,6 +1,6 @@
 # 👋 Chào mừng bạn đến với repo của tôi!
 
-Đây là nơi tôi lưu lại quá trình học và thực hành **lập trình hướng đối tượng (OOP) của C++**
+Đây là nơi tôi lưu lại quá trình học và thực hành **lập trình hướng đối tượng (OOP) bằng C++**.
 
 Mình public repo này chủ yếu để:
 
@@ -13,7 +13,8 @@ Mình public repo này chủ yếu để:
 Bạn có thể clone repo về và chạy thử các file code:
 
 ```bash
-git clone --depth 1 https://github.com/nguyen-mowftee2006/ôpc
+git clone --depth 1 https://github.com/nguyen-mowftee2006/oopc
+cd oopc
 ```
 
 ## 📂 Danh mục bài tập
@@ -24,6 +25,7 @@ git clone --depth 1 https://github.com/nguyen-mowftee2006/ôpc
 - [Buổi 2](baitaptrenlop/baitapbuoi2): Quan hệ kết tập và bài tập dạng phiếu
 - [Buổi 3](baitaptrenlop/baitapbuoi3): Mảng, con trỏ và phương thức khởi tạo
 - [Buổi 4](baitaptrenlop/baitapbuoi4): Kế thừa
+- [Buổi 5](baitaptrenlop/baitapbuoi5): Nạp chồng toán tử
 
 ### Bài thực hành
 
@@ -36,11 +38,16 @@ git clone --depth 1 https://github.com/nguyen-mowftee2006/ôpc
 - [Assignment 2](ASSIGNMENT2_NGUYENHUUMINHTHANH.CPP)
 - [Assignment 3](ASSIGNMENT3_NGUYENHUUMINHTHANH.CPP)
 
+### Đề thi mẫu
+
+- [Bài 1](dethimau/bai1.cpp): Bài tập dạng phiếu
+- [Bài 2](dethimau/bai2.cpp): Khởi tạo, hủy và nạp chồng toán tử
+
 ## ⚠️ Ghi chú
 
-Thư mục baithuchanh và phiếu giao không chứa đề bài do tài liệu lưu hành nội bộ, bạn vẫn có thể "tham khảo đề bài" thông qua code
+Thư mục bài thực hành và phiếu giao không chứa đề bài do tài liệu lưu hành nội bộ; bạn vẫn có thể tham khảo nội dung bài thông qua code.
 
-Các chương trình được viết theo quy ước của học phần và mốc kiến thức của từng buổi. Một số bài sử dụng `fflush(stdin); gets(...)` theo yêu cầu của môn học, vì vậy nên biên dịch bằng Dev-C++/TDM-GCC tương thích.
+Các chương trình được viết theo quy ước của học phần và mốc kiến thức của từng buổi. Một số bài cũ sử dụng `fflush(stdin); gets(...)` theo cách viết của học phần, vì vậy nên biên dịch bằng Dev-C++/TDM-GCC tương thích.
 
 ### Biên dịch và chạy trong VS Code
 
